@@ -32,7 +32,6 @@ public class Principal2 {
                 
         
         // Lista de Menus
-        ArrayList lista = new ArrayList<>();
         
         /* Agregar un proceso para generar objetos de tipo Menu Carta, Día, 
         Economico y Niño*. Cada arreglo datos, se corresponde a un tipo de Menú.
