@@ -5,30 +5,29 @@
  */
 package paquete2;
 
-import paquete3.Cuenta;
-
 /**
  *
  * @author USER
  */
 public abstract class Menu {
     
-    protected Cuenta cliente;
     protected String nombrePlato;
     protected double valorMenu;
+    protected double valorInicial;
     
-    public void establecerCuenta(Cuenta c){
-        cliente = c;
+    public Menu(String pl, double vi) {
+        nombrePlato = pl;
+        valorInicial = vi;
     }
     
     public void establecerNombrePlato(String nom){
         nombrePlato = nom;
     }
     
-    public abstract void establecerMenu();
+    public abstract void establecerValorMenu();
     
-    public Cuenta obtenerCliente(){
-        return cliente;
+    public void establecerValorMenuInicial(double vi){
+        valorInicial = vi;
     }
     
     public String obtenerNombrePlato(){
@@ -37,5 +36,9 @@ public abstract class Menu {
     
     public double obtenerValorMenu(){
         return valorMenu;
+    }
+    
+    public double obtenerValorMenuInicial() {
+        return valorInicial;
     }
 }

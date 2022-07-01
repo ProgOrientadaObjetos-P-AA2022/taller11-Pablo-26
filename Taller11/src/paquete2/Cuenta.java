@@ -1,18 +1,20 @@
 
-package paquete3;
+package paquete2;
+
+import java.util.ArrayList;
 
 public class Cuenta {
     
     private String nombre;
     private double iva;
-    private String menu;
+    private ArrayList<Menu> menu = new ArrayList<>();
+    private double subtotal;
     private double valorCancelar;
     
-    public Cuenta(String nom, double v, String men, double c){
+    public Cuenta(String nom, ArrayList<Menu> men, double sb){
         nombre = nom;
-        iva = v;
         menu = men;
-        valorCancelar = c;
+        subtotal = sb;
     }
     
     public void establecerNombre(String nom){
@@ -23,7 +25,7 @@ public class Cuenta {
         iva = iv;
     }
     
-    public void establecerMenu(String men){
+    public void establecerMenu(ArrayList<Menu> men){
         menu = men;
     }
     
@@ -40,7 +42,7 @@ public class Cuenta {
         return iva;
     }
     
-    public String obtenerMenu(){
+    public ArrayList<Menu> obtenerMenu(){
         return menu;
     }
     
