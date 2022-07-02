@@ -23,7 +23,7 @@ public class Ejecutor {
 
         MenuDelDia DiaMenu = new MenuDelDia("Beff Steak", 5.50, 5, 3.15);
 
-        MenuCarta CartaMenu = new MenuCarta("Ensalada de Maricos", 7.50, 3, 4);
+        MenuCarta CartaMenu = new MenuCarta("Ensalada de Maricos", 7.50, 3, 4, 15);
 
         lista.add(Ninos1);
         lista.add(Ninos2);

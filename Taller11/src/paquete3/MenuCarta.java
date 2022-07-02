@@ -9,10 +9,11 @@ public class MenuCarta extends Menu{
     private double bebida;
     private double porcAdic;
     
-    public MenuCarta(String pl, double vi,double g, double b){
+    public MenuCarta(String pl, double vi,double g, double b, double c){
         super(pl, vi);
         guarnicion = g;
         bebida = b;
+        porcAdic = c;
         
     }
 

@@ -64,7 +64,8 @@ public class Ejecutor2 {
             MenuCarta menuCarta = new MenuCarta(datos004[i][0],
                     Double.parseDouble(datos004[i][1]),
                     Double.parseDouble(datos004[i][2]),
-                    Double.parseDouble(datos004[i][3]));
+                    Double.parseDouble(datos004[i][3]),
+                    Double.parseDouble(datos004[i][4]));
             lista.add(menuCarta);
         }
 
@@ -74,6 +75,7 @@ public class Ejecutor2 {
         Cuenta miCuenta = new Cuenta("Pablo Ramon\n", lista);
         miCuenta.establecerSubtotal();
         miCuenta.establecerIVA();
+        miCuenta.calcularValorCancelar();
         System.out.printf("%s\n", miCuenta);
         // Fin de solución
 
