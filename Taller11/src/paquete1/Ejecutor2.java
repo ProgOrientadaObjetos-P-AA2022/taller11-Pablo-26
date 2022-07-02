@@ -1,6 +1,11 @@
 
 package paquete1;
 
+import java.util.ArrayList;
+import paquete2.Cuenta;
+import paquete2.Menu;
+import paquete3.*;
+
 public class Ejecutor2 {
 
     public static void main(String[] args) {
@@ -27,25 +32,50 @@ public class Ejecutor2 {
                 
         
         // Lista de Menus
-        ArrayList lista = new ArrayList<>();
+        ArrayList<Menu> lista = new ArrayList<>();
         
         /* Agregar un proceso para generar objetos de tipo Menu Carta, Día, 
         Economico y Niño*. Cada arreglo datos, se corresponde a un tipo de Menú.
         Iterar y crear los objetos según corresponda. Cada objeto generado, 
         agregar al ArrayList lista*/
         // Inicio de solución
-        
-        // Fin de solución
-        
-        
+        for (int i = 0; i < datos001.length; i++) {
+            MenuNinos menuNinos = new MenuNinos(datos001[i][0],
+                    Double.parseDouble(datos001[i][1]),
+                    Double.parseDouble(datos001[i][2]),
+                    Double.parseDouble(datos001[i][3]));
+            lista.add(menuNinos);
+        }
+
+        for (int i = 0; i < datos002.length; i++) {
+            MenuEconomico m = new MenuEconomico(datos002[i][0],
+                    Double.parseDouble(datos002[i][1]),
+                    Double.parseDouble(datos002[i][2]));
+            lista.add(m);
+        }
+        for (int i = 0; i < datos003.length; i++) {
+            MenuDelDia menuDia = new MenuDelDia(datos003[i][0],
+                    Double.parseDouble(datos003[i][1]),
+                    Double.parseDouble(datos003[i][2]),
+                    Double.parseDouble(datos003[i][3]));
+            lista.add(menuDia);
+        }
+        for (int i = 0; i < datos004.length; i++) {
+            MenuCarta menuCarta = new MenuCarta(datos004[i][0],
+                    Double.parseDouble(datos004[i][1]),
+                    Double.parseDouble(datos004[i][2]),
+                    Double.parseDouble(datos004[i][3]));
+            lista.add(menuCarta);
+        }
+
         for (int i = 0; i < lista.size(); i++) {
             lista.get(i).establecerValorMenu();
         }
-        
-        // Un objeto de tipo Cuenta
-        Cuenta miCuenta = new Cuenta("Luis Andrade", lista, 10);
+        Cuenta miCuenta = new Cuenta("Pablo Ramon\n", lista);
         miCuenta.establecerSubtotal();
-        miCuenta.establecerValorCancelar();
+        miCuenta.establecerIVA();
         System.out.printf("%s\n", miCuenta);
+        // Fin de solución
+
     }
 }
